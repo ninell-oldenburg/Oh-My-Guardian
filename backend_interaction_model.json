@@ -1,0 +1,963 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "oh my guardian",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "could you help me",
+                        "Can i ask you for help",
+                        "Could I ask you for help",
+                        "What to do",
+                        "How do I use that",
+                        "How to use that",
+                        "I don't know what to do",
+                        "What should I do",
+                        "Can you help me",
+                        "I need help",
+                        "Use Help",
+                        "Help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "KeywordSearchIntent",
+                    "slots": [
+                        {
+                            "name": "keyword",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "no {keyword}",
+                                "for {keyword}",
+                                "{keyword}"
+                            ]
+                        },
+                        {
+                            "name": "mode",
+                            "type": "modus"
+                        }
+                    ],
+                    "samples": [
+                        "can i have informations about {keyword}",
+                        "could you look up {keyword}",
+                        "can you look up {keyword}",
+                        "could i get information about {keyword}",
+                        "Let me look for a keyword",
+                        "I want to look for another keyword",
+                        "keyword",
+                        "search for another keyword",
+                        "I am interested in {keyword}",
+                        "I'm interested in {keyword}",
+                        "I'm looking for {keyword}",
+                        "Can you give me {mode} for {keyword}",
+                        "Can you give me {mode} on {keyword}",
+                        "Can you give me {keyword}",
+                        "I need {mode} about {keyword}",
+                        "I need {keyword}",
+                        "{keyword}",
+                        "{mode} on {keyword}",
+                        "what is there on {keyword}",
+                        "what {mode} is there on {keyword}",
+                        "what's going on with {keyword}",
+                        "what's up with {keyword}",
+                        "send me information about {keyword}",
+                        "get me information on {keyword}",
+                        "tell me all about {keyword}",
+                        "{mode} {keyword}",
+                        "can you look for {keyword}",
+                        "search for the {mode} {keyword}",
+                        "send me all {mode} {keyword}",
+                        "what {mode} is there containing the word {keyword}",
+                        "i look for {keyword}",
+                        "can you send me a mail with all {mode} about {keyword}",
+                        "find me all {mode} about {keyword}",
+                        "find me everything about {keyword}",
+                        "i am looking for {keyword}",
+                        "i am looking for {mode} {keyword}",
+                        "can you send me every {mode} containing {keyword}",
+                        "what is there about {keyword}",
+                        "what {mode} is there containing {keyword}",
+                        "i want everything about {keyword}",
+                        "send me {mode} about {keyword}",
+                        "send me articles about {keyword}",
+                        "articles about {keyword}",
+                        "{mode} about {keyword}",
+                        "i need {mode} containing {keyword}",
+                        "find me articles",
+                        "i am looking for articles",
+                        "i am looking for articles about {keyword}",
+                        "which articles are about {keyword}"
+                    ]
+                },
+                {
+                    "name": "SendMailIntent",
+                    "slots": [
+                        {
+                            "name": "mail",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "{mail} at {ending} {country}",
+                                "{mail} at {ending} dot {country}",
+                                "{mail}"
+                            ]
+                        },
+                        {
+                            "name": "ending",
+                            "type": "AMAZON.Actor",
+                            "samples": [
+                                "{ending}"
+                            ]
+                        },
+                        {
+                            "name": "country",
+                            "type": "domain"
+                        }
+                    ],
+                    "samples": [
+                        "i tell you to use {mail} at {ending}  {country}",
+                        "please use {mail} at {ending}  {country}",
+                        "please try {mail} at {ending}  {country}",
+                        "my current mail is {mail} at {ending}  {country}",
+                        "the current adress is {mail} at {ending}  {country}",
+                        "i please you to send it to {mail} at {ending}  {country}",
+                        "have it sent to {mail} at {ending}  {country}",
+                        "send the content to {mail} at {ending}  {country}",
+                        "that is {mail} at {ending}  {country}",
+                        "that's {mail} at {ending}  {country}",
+                        "why not try {mail} at {ending}  {country}",
+                        "try the {mail} at {ending}  {country} ",
+                        "here {mail} at {ending}  {country}",
+                        "i allow you to use {mail} at {ending}  {country}",
+                        "why not use {mail} at {ending}  {country}",
+                        "i would say {mail} at {ending}  {country}",
+                        "send the mail to {mail} at {ending}  {country}",
+                        "you can use {mail} at {ending}  {country}",
+                        "try {mail} at {ending}  {country}",
+                        "just use {mail} at {ending}  {country}",
+                        "it's {mail} at {ending}  {country}",
+                        "send it to {mail} at {ending} {country}",
+                        "{mail} at {ending}  {country}",
+                        "to {mail} at {ending} {country}",
+                        "Use {mail} at {ending}  {country}",
+                        "It is {mail} at {ending} {country}",
+                        "Mail {mail} at {ending} {country}",
+                        "My mail is {mail} at {ending} {country}",
+                        "My adress is {mail} at {ending} {country}",
+                        "{mail} at {ending} {country}"
+                    ]
+                },
+                {
+                    "name": "GoodbyeIntent",
+                    "slots": [
+                        {
+                            "name": "bye",
+                            "type": "bye"
+                        }
+                    ],
+                    "samples": [
+                        "Thank you so much",
+                        "Thanks a lot {bye}",
+                        "Thanks a lot",
+                        "Thank you so much {bye}",
+                        "No I've got it all {bye}",
+                        "No I've got everything {bye}",
+                        "No I've got it all",
+                        "No that's it {bye}",
+                        "No I'm fine {bye}",
+                        "No that's it",
+                        "No I'm fine",
+                        "I've got it all {bye}",
+                        "I've got it all ",
+                        "I got everything {bye}",
+                        "I got everything ",
+                        "I got it all",
+                        "I got it all {bye}",
+                        "That's all for now {bye}",
+                        "That's all ",
+                        "That's all for now ",
+                        "That's all {bye}",
+                        "I'm good {bye}",
+                        "I'm good",
+                        "I'm done with my research",
+                        "I'm done my reasearch",
+                        "I'm done with my research {bye}",
+                        "I'm done my reasearch {bye}",
+                        "I'm done {bye}",
+                        "I'm done",
+                        "I've got everything",
+                        "I've got everything {bye}",
+                        "That's it",
+                        "I'm fine",
+                        "I'm fine {bye}",
+                        "That's it {bye}",
+                        "Nothing more to say than {bye}",
+                        "{bye} thank you",
+                        "{bye}  thanks",
+                        "{bye}",
+                        "I want to say {bye}",
+                        "Let's say {bye}"
+                    ]
+                },
+                {
+                    "name": "YesIntent",
+                    "slots": [],
+                    "samples": [
+                        "exactly",
+                        "yes that is correct",
+                        "yes i do",
+                        "would be great",
+                        "would be perfect",
+                        "yes perfect",
+                        "perfect",
+                        "yeah perfect",
+                        "yeah that would be perfect",
+                        "sure thank you",
+                        "sure thanks",
+                        "sure do it",
+                        "sure why not",
+                        "sure",
+                        "love to",
+                        "yeah if that's alright for you",
+                        "yes if that alright for you ",
+                        "yes if you like",
+                        "yeah a mail would be good",
+                        "yes i love mails",
+                        "yeah i love mails",
+                        "yeah send it",
+                        "yes send it to me",
+                        "yes send it ",
+                        "yeah send it to me",
+                        "send it",
+                        "confirm",
+                        "confirmed",
+                        "yes would be awesome",
+                        "yeah would be awesome",
+                        "yes would be great",
+                        "yeah would be great",
+                        "yes do that",
+                        "yeah do that",
+                        "alright",
+                        "oui",
+                        "jupp",
+                        "jip",
+                        "Yes do you need my mail adress",
+                        "yeah thank you so much",
+                        "yes would be nice",
+                        "yeah would be nice",
+                        "yeah thank you",
+                        "yes thank you",
+                        "yeah thanks",
+                        "yeah cool",
+                        "yes cool",
+                        "Yes why not ",
+                        "please",
+                        "yes I'd love that",
+                        "yeah I'd love that",
+                        "yeah",
+                        "yes",
+                        "yes please"
+                    ]
+                },
+                {
+                    "name": "NoIntent",
+                    "slots": [],
+                    "samples": [
+                        "still not",
+                        "no why",
+                        "not at all",
+                        "no no no",
+                        "no please",
+                        "no you got me wrong",
+                        "no that's not what i was looking for",
+                        "no i need something else",
+                        "no thank you I'm good",
+                        "no thank you i'm fine",
+                        "no thank you",
+                        "no that's alright",
+                        "no i'm fine",
+                        "no thanks ",
+                        "not now",
+                        "not today",
+                        "No please not",
+                        "Nope",
+                        "No"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "modus",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "section",
+                                "synonyms": [
+                                    "sections"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tag",
+                                "synonyms": [
+                                    "tags"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "content",
+                                "synonyms": [
+                                    "texts",
+                                    "text",
+                                    "article",
+                                    "articles",
+                                    "keyword"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "domain",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "tr",
+                                "synonyms": [
+                                    "point tr",
+                                    "dot tr"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "al",
+                                "synonyms": [
+                                    "point al",
+                                    "dot al"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mk",
+                                "synonyms": [
+                                    "point mk",
+                                    "dot mk"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ba",
+                                "synonyms": [
+                                    "point ba",
+                                    "dot ba"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fi",
+                                "synonyms": [
+                                    "point fi",
+                                    "dot fi"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ee",
+                                "synonyms": [
+                                    "point ee",
+                                    "dot ee"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lt",
+                                "synonyms": [
+                                    "point it",
+                                    "dot it"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "li",
+                                "synonyms": [
+                                    "point li",
+                                    "dot li"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hu",
+                                "synonyms": [
+                                    "point hu",
+                                    "dot hu"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lu",
+                                "synonyms": [
+                                    "dot lu",
+                                    "point lu"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ch",
+                                "synonyms": [
+                                    "point ch",
+                                    "dot ch"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "se",
+                                "synonyms": [
+                                    "point se",
+                                    "dot se"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "si",
+                                "synonyms": [
+                                    "point si",
+                                    "dot si"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sk",
+                                "synonyms": [
+                                    "dot sk",
+                                    "point sk"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pt",
+                                "synonyms": [
+                                    "dot pt",
+                                    "point pt"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "no",
+                                "synonyms": [
+                                    "dot no",
+                                    "dotno",
+                                    "point no"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nl",
+                                "synonyms": [
+                                    "point nl",
+                                    "dot nl"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ie",
+                                "synonyms": [
+                                    "point ie",
+                                    "dot ie"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "is",
+                                "synonyms": [
+                                    "point is",
+                                    "dot is"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gr",
+                                "synonyms": [
+                                    "point gr",
+                                    "dot gr"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fo",
+                                "synonyms": [
+                                    "point fo",
+                                    "dot fo"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dk",
+                                "synonyms": [
+                                    "point dk",
+                                    "dot dk"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cz",
+                                "synonyms": [
+                                    "point cz",
+                                    "dot cz"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hr",
+                                "synonyms": [
+                                    "point hr",
+                                    "dot hr"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cat",
+                                "synonyms": [
+                                    "point cat",
+                                    "dot cat"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bg",
+                                "synonyms": [
+                                    "point bg",
+                                    "dot bg"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "br",
+                                "synonyms": [
+                                    "point br",
+                                    "dot br"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "es",
+                                "synonyms": [
+                                    "point es",
+                                    "dot es"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "be",
+                                "synonyms": [
+                                    "point be",
+                                    "dot be"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "at",
+                                "synonyms": [
+                                    "point at",
+                                    "dot at"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "au",
+                                "synonyms": [
+                                    "point au",
+                                    "dot au"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "it",
+                                "synonyms": [
+                                    "point it",
+                                    "dot it"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fr",
+                                "synonyms": [
+                                    "point fr",
+                                    "dot fr"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "uk",
+                                "synonyms": [
+                                    "point uk",
+                                    "dot uk"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pl",
+                                "synonyms": [
+                                    "point pl",
+                                    "dot pl"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gov",
+                                "synonyms": [
+                                    "point gov",
+                                    "dot gov"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "edu",
+                                "synonyms": [
+                                    "point edu",
+                                    "dot edu"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "int",
+                                "synonyms": [
+                                    "point int",
+                                    "dot int"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "org",
+                                "synonyms": [
+                                    "point org",
+                                    "dot org"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "us",
+                                "synonyms": [
+                                    "point us",
+                                    "dot us"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ca",
+                                "synonyms": [
+                                    "point ca",
+                                    "dot ca"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "me",
+                                "synonyms": [
+                                    "point me",
+                                    "dot me"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "net",
+                                "synonyms": [
+                                    "point net",
+                                    "dot net"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "de",
+                                "synonyms": [
+                                    "point de",
+                                    "dot de"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "com",
+                                "synonyms": [
+                                    "point com",
+                                    "dot com"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "bye",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "bye",
+                                "synonyms": [
+                                    "goodbye",
+                                    "arrivederci",
+                                    "ciao",
+                                    "talk to you later",
+                                    "see you",
+                                    "have a nice day",
+                                    "good night",
+                                    "bye bye",
+                                    "salut",
+                                    "au revoir",
+                                    "good bye"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "KeywordSearchIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.650055020895"
+                    },
+                    "slots": [
+                        {
+                            "name": "keyword",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.930429515442.1498112248587"
+                            }
+                        },
+                        {
+                            "name": "mode",
+                            "type": "modus",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "SendMailIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.609411200375"
+                    },
+                    "slots": [
+                        {
+                            "name": "mail",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1035399793844.858819251914"
+                            }
+                        },
+                        {
+                            "name": "ending",
+                            "type": "AMAZON.Actor",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1035399793844.1017803350309"
+                            }
+                        },
+                        {
+                            "name": "country",
+                            "type": "domain",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1035399793844.1399462522099"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Slot.930429515442.1498112248587",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "So your keyword is {keyword} , yes?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.930429515442.1498112248587",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me the keyword you're looking for"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me what you are looking for."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What are you looking for?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What keyword are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1277560800312.751649233855",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want me to search content or a tag?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for content or for a tag?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which mode are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.650055020895",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did I got that right - {keyword} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Just to be sure -  {keyword} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1035399793844.858819251914",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which mail adress should I use?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "To which adress should I send the mail?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Can you please tell me your mail adress?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1035399793844.1017803350309",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me everything which is between the at and the last dot"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "I need your mail provider"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1035399793844.1399462522099",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me just your coutrycode of your mailadress"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is the ending of your mail adress"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.609411200375",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "{mail} at {ending}  {country} - right?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Can you confirm - {mail} at {ending}  {country} ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
